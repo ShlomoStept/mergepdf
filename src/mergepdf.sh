@@ -10,7 +10,7 @@
 #                    (ii)   possibly find the full file-path if -f is specified
 #                    (iii)  call python script to merge files
 #   Notes :
-#            Usage : ./merge.sh  [ -options ]  < Files / Directory >  < Merge-File Name >"
+#            Usage : ./mergepdf.sh  [ -options ]  < Files / Directory >  < Merge-File Name >"
 #            flag options: 
 #                -a : all the files in the folder
 #                -s : some of the files , and then they must be listed
@@ -208,9 +208,6 @@ fi
 #   Step 3 : call the python merging script and supply it with all the required arguments
 #----------------------------------------------------------------------------------------------------
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
-echo $LINE
-echo $SCRIPT_DIR os
-echo $LINE
 python3 "$SCRIPT_DIR/py/merge_pdfs.py" "${final_file_array[@]}" ;  # TODO :: MUST manually specify file location
 
 ######### TO DO _____CREATE BASH SCRIPT TO INSTALL/MAKE THIS CALLABLE FROM ANYWHERE AS A BASH COMMAND ON ** ANY COMPUTER***
