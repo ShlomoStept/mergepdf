@@ -185,10 +185,11 @@ echo $LINE
 echo  "  :: Starting Merge... :: "
 
 declare -a final_file_array
-for path in "${file_array[@]}" ; do 
-    if [[ -d $path ]] ; then 
+for path in "${file_array[@]}" ; do
+    size=$(( ${#file_array[@]}  - 1 )) # need to declare this -bad substitution
+    if [[ -d "$path" ]] ; then 
         echo "Skipped Directory :: $path " ;
-    elif [[ ! $path =~ ".pdf"  &&  $path != ${file_array[ $(( ${#file_array[@]}  - 1 ))] } ]] ; then
+    elif [[ ! "$path" =~ ".pdf"  &&  "$path" != "${file_array[${size}]}" ]] ; then
         echo "Skipping  :: $path ::  Not a PDF. " ;
     else          
         echo " - adding file :$path " ;
