@@ -47,7 +47,7 @@ if merged_file_name == ".pdf" :
 merge_object = PdfMerger()
 
 for file in filepaths_to_merge:
-     merge_object.append(file)
+     merge_object.append(file, import_bookmarks=False)
      
 merge_object.write(str(merged_file_name))
 merge_object.close()
