@@ -189,9 +189,9 @@ declare -a final_file_array
 for path in "${file_array[@]}" ; do
     size=$(( ${#file_array[@]}  - 1 )) # need to declare this -bad substitution
     if [[ -d "$path" ]] ; then
-        echo " ~~~~ Skipping Directory    :: $path " ;
+        echo " ~~~~ Skipping Directory    :: $path" ;
     elif [[ ! "$path" =~ ".pdf"  &&  "$path" != "${file_array[${size}]}" ]] ; then
-        echo " ~~~~ Skipping Non-PDF File :: $path " ;
+        echo " ~~~~ Skipping Non-PDF File :: $path" ;
     else
         echo " - adding file : $path " ;
         final_file_array[${#final_file_array[@]}]="$path" ;
