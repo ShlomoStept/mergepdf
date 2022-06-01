@@ -93,8 +93,8 @@ while getopts ":a:s:f" option; do
             if [[ ! -d $OPTARG ]] ; then
                 error "Error: [ option -a ] a directory must be specified.   -->  \"$OPTARG\" is not a directory."
             fi
-            old_path=$PWD
-            path=$PWD/$OPTARG
+            old_path="$PWD"
+            path="$OPTARG"
             cd "$path" 
             for file_name in "$PWD"/* ; do 
                 file_array[${#file_array[@]}]="$file_name" ;
