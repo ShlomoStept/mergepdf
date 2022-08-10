@@ -13,7 +13,7 @@ The MacOS's preview app has this functionality, but its slow, manual, and annoyi
  ./mergepdf.sh  [ -options ]  <files-to-be-merged>/<path-to-folder>  < name-for-output-file >
    flag options: 
         -a : merge all the files in a folder, and then specify the folder. For current directory use .        (TODO - the default is the current folder)
-        -s : some of the files , and then list them
+        -s : some of the files , and then list them                                                           (TODO - the default is -s, with the first 2+ file names assumed to be the onesto be merged and last being the name-of-output-file)
         -f : full pathname not specified -- program will find the full filepath for all files ( if they exist )
 ```
 
