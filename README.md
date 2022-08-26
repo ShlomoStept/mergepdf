@@ -17,6 +17,11 @@ The MacOS's preview app has this functionality, but its slow, manual, and annoyi
         -f : full pathname not specified -- program will find the full filepath for all files ( if they exist )
 ```
 
+## Examples
+      ./mergepdf.sh -a . final_study_guide.pdf     : saves all the files in the current directory into the pdf 'final_study_guide.pdf'
+      ./mergepdf.sh -s  first.pdf  second.pdf first_and_second_merged.pdf  : saves 'first.pdf' & 'second.pdf' into 'first_and_second_merged.pdf'
+
+
 ## Requirements
 
 - You need Python 3.6+ and pip to install and use this script
